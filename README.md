@@ -2,6 +2,7 @@
 WebConsole is a server that allows clients to communicate with console based programs running on the same computer as the server. Reproduces a feature available on the control panel of many hosting services. 
 
 This project was made using https://github.com/jrghndl/Web-Suite
+
 If you need a better understanding of the code used in this project, read WebSuite's documentation in the wiki.
 
 ## Trying WebConsole
