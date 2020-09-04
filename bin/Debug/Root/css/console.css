@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: -1;
+}
+
+
+.console {
+    width: 85%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+#consoleText {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    border: 1px solid gray;
+    font: medium monospace;
+    overflow: auto;
+    padding: 2px;
+    resize: vertical;
+    min-height: 400px;
+	height: 400px;
+    width: 100%;
+
+}
+
+#input {
+    margin-top: 5px;
+    width: 100%;
+    font: medium monospace;
+}
+
+.loginText {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 2px 5px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+.loginText:focus {
+    outline: none;
+}
+
+.loginButton {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-right: 30px;
+    height: 25px;
+    width: 80px;
+    min-width: 80px;
+    background-color: #E67E22;
+    border-color: #EB891D;
+    color: white;
+    font-family: Open Sans;
+    font-size: small;
+    font-weight: bold;
+}
+
+.loginButton:focus {
+    outline: none;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    min-height: 100%;
+    width: 70%;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    border: thin solid lightslategray;
+}
+
+.status{
+    float: left;
+    width: 50%
+}
+
+.statusMessage{
+    font-weight: bold;
+    font-size: larger;
+    padding-bottom: 20px;
+}
+
+.statusMessage:after{
+    content: "";
+    display: table;
+    clear: both;
+}

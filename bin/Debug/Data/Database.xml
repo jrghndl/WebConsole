@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<Database>
+  <xs:schema id="Database" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="Database" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Accounts">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Username" type="xs:string" minOccurs="0" />
+                <xs:element name="Password" type="xs:string" minOccurs="0" />
+                <xs:element name="Role" type="xs:string" minOccurs="0" />
+                <xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+                <xs:element name="LastLogin" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Redirects">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="From" type="xs:string" minOccurs="0" />
+                <xs:element name="To" type="xs:string" minOccurs="0" />
+                <xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Accounts" />
+        <xs:field xpath="ID" />
+      </xs:unique>
+      <xs:unique name="Redirects_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Redirects" />
+        <xs:field xpath="ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Accounts>
+    <ID>0</ID>
+    <Username>testuser</Username>
+    <Password>password</Password>
+    <Role>admin</Role>
+    <DateCreated>9/4/2020 12:00:28 PM</DateCreated>
+  </Accounts>
+</Database>
